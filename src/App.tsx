@@ -1,25 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+// styles
+import style from './assets/common-styles.module.css';
+
+// components
+import {Todo} from "./components/todo";
+
+// types
+import {ITasks} from "./interfaces/tasks.interface";
 
 function App() {
+  const tasks: Array<ITasks> = [
+    {
+      id: 0,
+      title: 'Сверстать Todo проект на React',
+      done: false
+    },
+    {
+      id: 1,
+      title: 'Опубликовать проект на GitHub',
+      done: false
+    }
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className={style.root}>
+      <Todo tasks={tasks}/>
+    </section>
   );
 }
 

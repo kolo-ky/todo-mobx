@@ -1,0 +1,29 @@
+.root {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.formInput {
+    flex-grow: 1;
+    outline: none;
+    height: 40px;
+    box-sizing: border-box;
+    padding-left: 5px;
+    font-size: 20px;
+    font-weight: 300;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+}
+
+.formButton {
+    outline: none;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    margin-left: 15px;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 15px;
+}
