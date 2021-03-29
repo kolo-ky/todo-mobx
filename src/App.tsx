@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 // styles
 import style from './assets/common-styles.module.css';
@@ -9,19 +9,16 @@ import {Todo} from "./components/todo";
 // types
 import {ITasks} from "./interfaces/tasks.interface";
 
+import {getTasks} from "./api/tasks/tasks";
+
 function App() {
-  const tasks: Array<ITasks> = [
-    {
-      id: 0,
-      title: 'Сверстать Todo проект на React',
-      done: false
-    },
-    {
-      id: 1,
-      title: 'Опубликовать проект на GitHub',
-      done: false
-    }
-  ];
+  const [tasks, setTasks] = useState<ITasks[]>([]);
+
+  useEffect(() => {
+    getTasks().then((resp) => {
+      setTasks(resp.data);
+    });
+  });
 
   return (
     <section className={style.root}>

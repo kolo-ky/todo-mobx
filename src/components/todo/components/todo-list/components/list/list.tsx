@@ -19,7 +19,7 @@ const List: FC<IProps> = (props) => {
             {
                 props.tasks.map(task => {
                     return (
-                        <Item title={task.title}/>
+                        <Item title={task.title} done={task.done} key={task.id}/>
                     );
                 })
             }

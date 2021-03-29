@@ -1,0 +1,14 @@
+{
+  "tasks": [
+    {
+      "id": 0,
+      "title": "Сверстать Todo проект на React",
+      "done": false
+    },
+    {
+      "id": 1,
+      "title": "Опубликовать проект на GitHub",
+      "done": true
+    }
+  ]
+}
