@@ -18,7 +18,7 @@ function App() {
     getTasks().then((resp) => {
       setTasks(resp.data);
     });
-  });
+  }, [setTasks]);
 
   return (
     <section className={style.root}>
